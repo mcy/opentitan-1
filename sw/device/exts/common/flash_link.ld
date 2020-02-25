@@ -96,12 +96,6 @@ SECTIONS {
     *(.data.*)
     *(.sdata)
     _data_end = .;
-    /**
-     * The VMem format is composed of 32-bit words. Since |.data| may contain
-     * symbols that do not end on an alignment boundary, we pad it out to avoid
-     * any issues.
-     */
-    . = ALIGN(4);
   } > ram
 
   /**
