@@ -32,3 +32,10 @@ sw_lib_mmio = declare_dependency(
     ],
   )
 )
+
+sw_lib_hardened = declare_dependency(
+  link_with: static_library(
+    'hardened_ot',
+    sources: ['hardened.c'],
+  )
+)
